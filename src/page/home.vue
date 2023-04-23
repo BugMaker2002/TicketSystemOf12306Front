@@ -28,7 +28,7 @@
                     <div class="weather-container">\
                     <div class="row">\
                     <div id="weather-description"class="inline"></div>\
-                    <div class="inline">-</div>\
+                    <div class="inline">仿12306售票系统</div>\
                     <div id="temp" class="inline"></div>\
                     </div>\
                     </div>\
@@ -147,7 +147,7 @@
     }
 
     .body {
-        background-color: #5F4B8B;
+        background-color: #e6eceb;
         margin: 0px;
     }
 
