@@ -129,12 +129,12 @@
                 this.$refs[formName].validate(async (valid) => {
                     if (valid) {
                         this.tableData = [];
+
                         const res = await searchTrainSchedule({train_start_station:this.searchForm.start_station , train_end_station:this.searchForm.end_station})
                         if (res.status == 1) {
                             this.$message({
                                 type: 'success',
                                 message: '搜索成功'
-
                             });
                             this.tableData = [];
                             for(var i = 0 ; i < res.trainScheduleInfoList.length ; i++ )

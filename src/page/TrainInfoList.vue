@@ -130,8 +130,10 @@
             async initData(){
                 try{
 
-                    const res = await getAllTrainNumber()
+                    const res = await getAllTrainNumber();
+
                    this.trainData = res.dataLists;
+                    console.log('这是输出的信息：'+res);
                     const TrainInfoData = await getTrainInfoData({offset: 0, limit: 2141});
                     if (TrainInfoData.status == 1) {
 

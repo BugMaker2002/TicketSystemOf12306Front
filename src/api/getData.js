@@ -20,7 +20,7 @@ export const signout = () => fetch('/user/signout');
 
 export const getAdminInfo = data =>      fetch('/user/info',data,'GET');
 
-export const getUserInfo = data => fetch('/user/userinfo',data,'GET');
+export const getUserInfo = data => fetch('/user/userinfo',data,'GET',{mode: 'no-cors'});
 /**
  * 修改用户信息
  */
@@ -35,7 +35,7 @@ export const changePassword= data => fetch('/user/changepassword', data, 'POST')
  * 获取乘客信息
  * @param data
  */
-export const getPassengerInfo= data => fetch('/passenger/getPassengerInfo', data);
+export const getPassengerInfo= data => fetch('/passenger/getPassengerInfo', data,'GET',{mode: 'no-cors'});
 
 /**
  * 添加乘客
@@ -53,7 +53,7 @@ export const deletePassengerInfo= data => fetch('/passenger/deletePassengerInfo'
  * 根据起始站和目的站查 查询列车时刻表
  * @param data
  */
-export const searchTrainSchedule= data => fetch('/trainSchedule/searchTrainSchedule', data);
+export const searchTrainSchedule= data => fetch('/trainSchedule/searchTrainSchedule', data,'GET',{mode: 'no-cors'});
 
 /**
  * 查询列车运行的具体时刻
@@ -65,7 +65,7 @@ export const getTrainScheduleList= data => fetch('/trainSchedule/getTrainSchedul
  * 根据起始站和目的站 查询接续换乘的列车
  * @param data
  */
-export const searchTransferSchedule= data => fetch('/trainSchedule/searchTransferSchedule', data);
+export const searchTransferSchedule= data => fetch('/trainSchedule/searchTransferSchedule', data,'GET',{mode: 'no-cors'});
 
 
 /**
@@ -117,19 +117,19 @@ export const paySuccess= data => fetch('/order/paySuccess', data,'POST');
  * 获取列车总信息
  */
 
-export const getTrainInfoData = data => fetch('/train/traininfo', data);
+export const getTrainInfoData = data => fetch('/train/traininfo', data,'GET',{mode: 'no-cors'});
 /**
  * 搜索列车信息
  */
 
-export const SearchTrainInfoData = data => fetch('/train/searchtraininfo', data);
+export const SearchTrainInfoData = data => fetch('/train/searchtraininfo', data,'GET',{mode: 'no-cors'});
 
 /**
  * 搜索列车经停信息
  * @param data
  * @constructor
  */
-export const SearchTrainParkingInfo = data => fetch('/train/searchtrainparkingInfo', data);
+export const SearchTrainParkingInfo = data => fetch('/train/searchtrainparkingInfo', data,'GET',{mode: 'no-cors'});
 
 /**
  * 查询用户本人的所有订单
@@ -190,7 +190,7 @@ export const getOrderMoney = data => fetch('/order/getOrderMoney', data,);
  * 和获取所有车次
  * @param data
  */
-export const getAllTrainNumber = data => fetch('/train/getAllTrainNumber', data,);
+export const getAllTrainNumber = data => fetch('/train/getAllTrainNumber', data,'GET',{mode: 'no-cors'});
 
 
 
