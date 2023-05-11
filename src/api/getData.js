@@ -72,14 +72,14 @@ export const searchTransferSchedule= data => fetch('/trainSchedule/searchTransfe
  * 票价查询
  * @param data
  */
-export const queryTrainTicket= data => fetch('/query/queryTrainTicket', data);
+export const queryTrainTicket= data => fetch('/query/queryTrainTicket', data,'GET',{mode: 'no-cors'});
 
 /**
  *
  * 余票数量查询
  * @param data
  */
-export const queryTrainTicketNum= data => fetch('/query/queryTrainTicketNum', data);
+export const queryTrainTicketNum= data => fetch('/query/queryTrainTicketNum', data,'GET',{mode: 'no-cors'});
 
 /**
  * 接续换乘的余票数量查询
@@ -135,19 +135,19 @@ export const SearchTrainParkingInfo = data => fetch('/train/searchtrainparkingIn
  * 查询用户本人的所有订单
  * @param data
  */
-export const getAllOrderList = data => fetch('/order/getAllOrderList', data);
+export const getAllOrderList = data => fetch('/order/getAllOrderList', data,'GET',{mode: 'no-cors'});
 
 /**
  * 查询用户未出行订单
  * @param data
  */
-export const getNotripOrderList = data => fetch('/order/getNotripOrderList', data);
+export const getNotripOrderList = data => fetch('/order/getNotripOrderList', data,'GET',{mode: 'no-cors'});
 
 /**
  * 查询用户未支付订单
  * @param data
  */
-export const getNoPayOrderList = data => fetch('/order/getNoPayOrderList', data);
+export const getNoPayOrderList = data => fetch('/order/getNoPayOrderList', data,'GET',{mode: 'no-cors'});
 
 /**
  * 退票
